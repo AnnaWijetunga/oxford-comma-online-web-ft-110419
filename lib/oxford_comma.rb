@@ -8,5 +8,8 @@ def oxford_comma(array)
   end
 end
 
+def oxford_comma(array)
+  array.size <= 2? a.join(' and '):(a.first)
+
 # takes an argument array of string elements
 # converts it into a string using the Oxform comma
