@@ -1,10 +1,23 @@
+# def oxford_comma(array)
+#   if array.size == 1 
+#     return array[0]
+#   elsif array.size == 2
+#     return array.join(" and ")
+#   else 
+#     return array[0..-2].join(',') + " , and " + array[-1]
+#   end
+# end
+
 def oxford_comma(array)
-  if array.size == 1 
-    return array[0]
-  elsif array.size == 2
+  if array.length == 1
+    return "#{array[0]}"
+  elsif array.length == 2
     return array.join(" and ")
-  else 
-    return array[0..-2].join(',') + " , and " + array[-1]
+  elsif array.length >= 3
+    new_last_array_item = "and #{array[-1]}"
+    array.pop
+    array.push(new_last_array_item)
+    return array.join(", ")
   end
 end
 
